@@ -130,7 +130,7 @@ phantom_obj = Phantom{Float64}(
 
 # Load sequence
 @info "Loading sequences... INPUT REQUIRED"
-print("Sequence folder (ex: \"../sequences/Pulseq/\"): ")
+print("Sequence folder (ex: ../sequences/Pulseq/): ")
 seqFolder = readline()
 print("Sequence to simulate (do not include .seq): ")
 radical = readline()
@@ -166,16 +166,10 @@ raw = simulate(obj, seq, sys; sim_params);
 @info "Reconstructing image..."
 function reconstruct_2d_image(raw::RawAcquisitionData)
     acqData = AcquisitionData(raw)
-    # raw.params["enc_lim_kspace_encoding_step_0"] = Limit(0, 126, 64)
-    # raw.params["enc_lim_kspace_encoding_step_1"] = Limit(0, 126, 64)
-    # raw.params["encodedSize"] = [127, 127, 1]
-    # raw.params["reconSize"] = [128, 128, 1]
-    # println("acqData ", acqData.traj[1])
     acqData.traj[1].circular = false #Removing circular window
     C = maximum(2*abs.(acqData.traj[1].nodes[:]))  #Normalize k-space to -.5 to .5 for NUFFT
     acqData.traj[1].nodes = acqData.traj[1].nodes[1:2,:] ./ C
     Nx, Ny = raw.params["reconSize"][1:2]
-    # println("raw.params ", raw.params["reconSize"])
     recParams = Dict{Symbol,Any}()
     recParams[:reconSize] = (Nx, Ny)
     recParams[:densityWeighting] = true
