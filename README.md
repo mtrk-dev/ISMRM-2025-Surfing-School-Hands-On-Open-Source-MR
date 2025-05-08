@@ -1,11 +1,14 @@
 # ISMRM-2025-Surfing-School-Hands-On-Open-Source-MR
 Materials for the ISMRM 2025 educational course "Surfing School Hands On Open Source MR" held on May 11, 2025
 
-## Course links (you need to be registered for the ISMRM 2025 conference to access these ressources)
+## Course description
+
+### Links (you need to be registered for the ISMRM 2025 conference to access these ressources)
 Sunday, May 11: [educational session](https://submissions.mirasmart.com/ISMRM2025/Itinerary/PresentationDetail.aspx?evdid=202)
 
 Thursday, May 15: [mtrk oral session](https://submissions.mirasmart.com/ISMRM2025/Itinerary/PresentationDetail.aspx?evdid=1260) 
 
+### Overview
 <p align="center">
   <img src="Slide1.jpg" width="529"/>
 </p>
