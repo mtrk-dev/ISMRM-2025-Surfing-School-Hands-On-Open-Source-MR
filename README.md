@@ -29,7 +29,7 @@ If mtrk is already installed, make sure it is up to date:
 * Finally `sudo git pull` in the viewer folder `cd /opt/mtrk_viewer`
 
 ## Installing KomaMRI
-Follow instructions on [their repository](https://github.com/JuliaHealth/KomaMRI.jl).
+Follow instructions on [the KomaMRI repository](https://github.com/JuliaHealth/KomaMRI.jl).
 Check further documentation [here](https://juliahealth.org/KomaMRI.jl/stable/).
 
 ## Generating sequences with different readouts using mtrk
