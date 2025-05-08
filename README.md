@@ -6,6 +6,14 @@ Sunday, May 11: [educational session](https://submissions.mirasmart.com/ISMRM202
 
 Thursday, May 15: [mtrk oral session](https://submissions.mirasmart.com/ISMRM2025/Itinerary/PresentationDetail.aspx?evdid=1260) 
 
+<p align="center">
+  <img src="Slide1.jpg" width="529"/>
+</p>
+
+<p align="center">
+  <img src="Slide2.jpg" width="529"/>
+</p>
+
 ## Installing mtrk
 Follow instructions for Vagrant install on [main page](https://github.com/mtrk-dev).
 To ensure smooth installation and execution, it is better to have VirtulBox opened in the background. 
@@ -41,6 +49,32 @@ For this tutorial, 6 base sequences containing a spin-echo excitation, different
 
 ## Using different readouts in mtrk
 The processus is identical for every readout. It is important to use a base sequence adapted for the chosen type of reaout (single- or multi-shot) to ensure the looping structure coherence. 
+
+### A bit of theory
+<p align="center">
+  <img src="Slide16.jpg" width="529"/>
+</p>
+<p align="center">
+  <img src="Slide17.jpg" width="529"/>
+</p>
+<p align="center">
+  <img src="Slide20.jpg" width="529"/>
+</p>
+<p align="center">
+  <img src="Slide21.jpg" width="529"/>
+</p>
+<p align="center">
+  <img src="Slide26.jpg" width="529"/>
+</p>
+<p align="center">
+  <img src="Slide27.jpg" width="529"/>
+</p>
+<p align="center">
+  <img src="Slide31.jpg" width="529"/>
+</p>
+<p align="center">
+  <img src="Slide32.jpg" width="529"/>
+</p>
   
 ### Import base sequence
 * Open the mtrk designer GUI,
@@ -87,3 +121,43 @@ It saves results as HTML files stored in `Simulation/Results`:
 * `Simulation/Results/Images` stores a plot of the reconstructed image.
 
 Expected results are stored in `Simulation/ExpectedResults`.
+
+<p align="center">
+  <img src="Slide19.jpg" width="529"/>
+</p>
+<p align="center">
+  <img src="Slide24.jpg" width="529"/>
+</p>
+<p align="center">
+  <img src="Slide30.jpg" width="529"/>
+</p>
+<p align="center">
+  <img src="Slide35.jpg" width="529"/>
+</p>
+<p align="center">
+  <img src="Slide38.jpg" width="529"/>
+</p>
+<p align="center">
+  <img src="Slide39.jpg" width="529"/>
+</p>
+<p align="center">
+  <img src="Slide40.jpg" width="529"/>
+</p>
+
+# A few references
+
+## Books & website:​
+* Bernstein, Matt A., Kevin F. King, and Xiaohong Joe Zhou. Handbook of MRI pulse sequences. Elsevier, 2004.​
+* Brown, Robert W., et al. Magnetic resonance imaging: physical principles and sequence design. John Wiley & Sons, 2014.​
+* https://mriquestions.com/index.html​
+
+## Opens-source tools:​
+* ODIN: Jochimsen Thies H, Von Mengershausen Michael. ODIN—object-oriented development interface for NMR.​
+* SequenceTree: Magland, Jeremy F., et al. "Pulse sequence programming in a dynamic visual environment: SequenceTree." Magnetic resonance in medicine 75.1 (2016): 257-265.​
+* Pulseq: Layton, Kelvin J., et al. "Pulseq: a rapid and hardware‐independent pulse sequence prototyping framework." Magnetic resonance in medicine 77.4 (2017): 1544-1552. Journal of Magnetic Resonance. 2004;170(1):67–78.​
+* mtrk: Artiges A, Singh Saimbhi A, Lattanzi R, and Block KT, mtrk – A flexible open-source framework for developing MRI pulse sequences based on common web standards. ISMRM 2024, https://www.youtube.com/watch?v=KraT1FKSTcc​
+* KSFoundation: Skare, Stefan, et al. An abstraction layer for simpler EPIC pulse programming on GE MR systems in a clinical environment. ISMRM 2017.​
+* GinkgoSequence: Artiges, A., et al.: Ginkgo: a novel modular and Open Source MRI pulse sequence development framework dedicated to MRI systems, ISMRM 2022​
+* JEMRIS: Stöcker, Tony, et al. "High‐performance computing MRI simulations." Magnetic resonance in medicine 64.1 (2010).​
+* KomaMRI: Castillo‐Passi, Carlos, et al. "KomaMRI. Jl: an open‐source framework for general MRI simulations with GPU acceleration." Magnetic Resonance in Medicine 90.1 (2023): 329-342.​
+* MRZero: Loktyushin, Alexander, et al. "MRzero‐automated discovery of MRI sequences using supervised learning." Magnetic Resonance in Medicine 86.2 (2021): 709-724.​
