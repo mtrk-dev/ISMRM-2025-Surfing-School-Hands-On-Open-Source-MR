@@ -30,7 +30,9 @@ If mtrk is already installed, **make sure it is up to date**:
 * Go to the main folder `cd /opt/mtrk_designer_gui/` 
 * Make sure you have the latest version of the code by running `sudo git pull`
 * Same in the api folder `cd /opt/mtrk_designer_gui/app/mtrk_designer_api`
-* Finally `sudo git pull` in the viewer folder `cd /opt/mtrk_viewer`
+* Go to the server folder `/opt/mtrk_designer_gui/app` and restart the designer server using `sudo systemctl restart mtrk_web_app`
+* Then `sudo git pull` in the viewer folder `cd /opt/mtrk_viewer`
+* Finally go to the server folder `/var/www/mtrk_viewer` and restart the viewer server using `sudo systemctl restart nginx`
 * Exit the ssh mode with `exit`.
 
 
