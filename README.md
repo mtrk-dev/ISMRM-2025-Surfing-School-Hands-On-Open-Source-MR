@@ -91,6 +91,9 @@ The processus is identical for every readout. It is important to use a base sequ
 * Load the mtrk file in the mtrk viewer to inspect it (see [main page](https://github.com/mtrk-dev) for details),
 * Simulate the Pulseq file in KomaMRI (see simulation section of this tutorial for more). 
 
+### Demo video
+Check it [here](https://drive.google.com/file/d/12gL5K6YDvFFJc_neOKokY_u_S6xS06K_/view?usp=sharing). 
+
 ### More flexibility
 It is possible to modify the sequence on-the-fly:
 * Resolution and field of view (FOV) can be modified in the settings before inserting the readout in the sequence.
