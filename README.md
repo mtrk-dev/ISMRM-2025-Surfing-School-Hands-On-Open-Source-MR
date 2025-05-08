@@ -95,6 +95,7 @@ The processus is identical for every readout. It is important to use a base sequ
 <p align="center">
   <img src="Slide18.jpg" width="529"/>
 </p>
+
 Check it [here](https://drive.google.com/file/d/12gL5K6YDvFFJc_neOKokY_u_S6xS06K_/view?usp=sharing). 
 
 ### More flexibility
