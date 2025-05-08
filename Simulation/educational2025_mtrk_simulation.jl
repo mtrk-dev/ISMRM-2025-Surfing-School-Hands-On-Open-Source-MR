@@ -1,5 +1,15 @@
+@info "GETTING INPUT FROM USER"
+print("Sequence folder (ex: ../sequences/Pulseq/): ")
+seqFolder = readline()
+print("Sequence to simulate (do not include .seq): ")
+radical = readline()
+print("Phantom to use (cylinder or brain): ")
+pantom_choice = readline()
+@info "GETTING INPUT FROM USER... done."
+
 @info "Loading packages..."
-using KomaMRI, CUDA
+using KomaMRI
+using CUDA
 using MAT
 @info "Loading packages... done."
 
@@ -129,13 +139,7 @@ phantom_obj = Phantom{Float64}(
 # plot_phantom_map(obj, :T1)
 
 # Load sequence
-@info "Loading sequences... INPUT REQUIRED"
-print("Sequence folder (ex: ../sequences/Pulseq/): ")
-seqFolder = readline()
-print("Sequence to simulate (do not include .seq): ")
-radical = readline()
-print("Phantom to use (cylinder or brain): ")
-pantom_choice = readline()
+@info "Loading sequences..."
 filename = seqFolder*radical*".seq" 
 seq = read_seq(filename); # Pulseq file
 sequencePlot = plot_seq(seq)
@@ -143,7 +147,7 @@ savefig(sequencePlot,"Results/Sequences/sequence_"*radical*".html")
 @info "Loading sequences... done."
 
 # Plot readout trajectory
-@info "Writing reaout trajectory..."
+@info "Writing readout trajectory..."
 kspace = plot_kspace(seq) # plot trajectory
 savefig(kspace,"Results/Trajectories/kspace_"*radical*".html")
 @info "Writing readout trajectory... done."
