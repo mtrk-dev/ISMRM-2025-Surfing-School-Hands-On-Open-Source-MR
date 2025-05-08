@@ -11,7 +11,7 @@ Thursday, May 15: [mtrk oral session](https://submissions.mirasmart.com/ISMRM202
 </p>
 
 <p align="center">
-  <img src="Slide2.jpg" width="529"/>
+  <img src="Slide3.jpg" width="529"/>
 </p>
 
 ## Installing mtrk
