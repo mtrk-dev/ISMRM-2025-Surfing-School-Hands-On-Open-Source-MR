@@ -4,9 +4,9 @@ Materials for the ISMRM 2025 educational course "Surfing School Hands On Open So
 ## Course description
 
 ### Links (you need to be registered for the ISMRM 2025 conference to access these ressources)
-Sunday, May 11: [educational session](https://submissions.mirasmart.com/ISMRM2025/Itinerary/PresentationDetail.aspx?evdid=202)
+Sunday, May 11, 13:15: [educational session](https://submissions.mirasmart.com/ISMRM2025/Itinerary/PresentationDetail.aspx?evdid=202)
 
-Thursday, May 15: [mtrk oral session](https://submissions.mirasmart.com/ISMRM2025/Itinerary/PresentationDetail.aspx?evdid=1260) 
+Thursday, May 15, 13:15: [mtrk oral session](https://submissions.mirasmart.com/ISMRM2025/Itinerary/PresentationDetail.aspx?evdid=1260) 
 
 ### Overview
 <p align="center">
@@ -18,40 +18,43 @@ Thursday, May 15: [mtrk oral session](https://submissions.mirasmart.com/ISMRM202
 </p>
 
 ## Installing mtrk
-Follow instructions for Vagrant install on [main page](https://github.com/mtrk-dev).
+**Follow instructions** for Vagrant install on [main page](https://github.com/mtrk-dev).
 To ensure smooth installation and execution, it is better to have VirtulBox opened in the background. 
 
-If mtrk is already installed, make sure it is up to date:
+If mtrk is already installed, **make sure it is up to date**:
 * Run `vagrant ssh`
 * Go to the main folder `cd /opt/mtrk_designer_gui/` 
 * Make sure you have the latest version of the code by running `sudo git pull`
 * Same in the api folder `cd /opt/mtrk_designer_gui/app/mtrk_designer_api`
 * Finally `sudo git pull` in the viewer folder `cd /opt/mtrk_viewer`
+* Exit the ssh mode with `exit`.
+
+**Alternatively**, you can start anew by deleting your current installation `vagrant destroy`, running `git pull` in you `mtrk_designer_gui` folder and creating a new Vagrant setup with `vagrant up`. 
 
 ## Installing KomaMRI
-Follow instructions on [the KomaMRI repository](https://github.com/JuliaHealth/KomaMRI.jl).
+Follow instructions on the [KomaMRI repository](https://github.com/JuliaHealth/KomaMRI.jl).
 Check further documentation [here](https://juliahealth.org/KomaMRI.jl/stable/).
 
 ## Generating sequences with different readouts using mtrk
-Four different readout strategies are offered in mtrk:
-* Cartesian: a multi-shot Cartesian trajectory
-* EPI: a single-shot Cartesian echo-planar trajectory
-* Radial: a multi-shot radial trajectory (using golden angle)
-* Spiral: a single-shot Archimedaen spiral trajectory.
+Four different **readout strategies** are offered in mtrk:
+* **Cartesian**: a multi-shot Cartesian trajectory
+* **EPI**: a single-shot Cartesian echo-planar trajectory
+* **Radial**: a multi-shot radial trajectory (using golden angle)
+* **Spiral**: a single-shot Archimedaen spiral trajectory.
   
-These can be found in the block browser of the mtrk designer interface (check [main page](https://github.com/mtrk-dev) for an overview of the designer).
+These can be found in the **block browser** of the **mtrk designer** interface (check [main page](https://github.com/mtrk-dev) for an overview of the designer).
 
 They can be used with any excitation pattern (either created from scratch or imported from a pre-existing sequence).
-For this tutorial, 6 base sequences containing a spin-echo excitation, different timings (TE/TR), and resolutions (128/64) are provided in `Sequences/base_sequences`:
+For this tutorial, **6 base sequences** containing a spin-echo excitation, different timings (TE/TR), and resolutions (128/64) are provided in [Sequences/base_sequences](https://github.com/mtrk-dev/ISMRM-2025-Surfing-School-Hands-On-Open-Source-MR/tree/main/Sequences/base_sequences):
 * `base_sequence_multiShot_TE60_TR4000_res64.mtrk`: spin echo exitation (1 slice), TE = 60ms, TR = 4000ms, resolution = 64, number of excitations = 64, adapted for multi-shot trajectories. 
 * `base_sequence_multiShot_TE60_TR4000_res128.mtrk`: spin echo exitation (1 slice), TE = 60ms, TR = 4000ms, resolution = 128, number of excitations = 128, adapted for multi-shot trajectories. 
 * `base_sequence_multiShot_TE200_TR4000_res128.mtrk`: spin echo exitation (1 slice), TE = 200ms, TR = 4000ms, resolution = 128, number of excitations = 128, adapted for multi-shot trajectories. 
 * `base_sequence_singleShot_TE60_TR4000_res64.mtrk`: spin echo exitation (1 slice), TE = 60ms, TR = 4000ms, resolution = 128, number of excitations = 1, adapted for single-shot trajectories. 
-* `base_sequence_singleShot_TE60_TR4000_res128.mtrk`: spin echo exitation (1 slice), TE = 60ms, TR = 4000ms, resolution = 128, number of excitations = 1, adapted for single-shot trajectories, TE is too short to support fully-sampled EPI readout. 
+* `base_sequence_singleShot_TE60_TR4000_res128.mtrk`: spin echo exitation (1 slice), TE = 60ms, TR = 4000ms, resolution = 128, number of excitations = 1, adapted for single-shot trajectories, **TE is too short to support fully-sampled EPI readout.**
 * `base_sequence_singleShot_TE200_TR4000_res128.mtrk`: spin echo exitation (1 slice), TE = 200ms, TR = 4000ms, resolution = 128, number of excitations = 1, adapted for single-shot trajectories. 
 
 ## Using different readouts in mtrk
-The processus is identical for every readout. It is important to use a base sequence adapted for the chosen type of reaout (single- or multi-shot) to ensure the looping structure coherence. 
+The processus is **identical for every readout**. It is important to use a **base sequence** adapted for the chosen type of reaout (single- or multi-shot) to ensure the looping structure coherence. 
 
 ### A bit of theory
 <p align="center">
@@ -80,7 +83,7 @@ The processus is identical for every readout. It is important to use a base sequ
 </p>
   
 ### Import base sequence
-* Open the mtrk designer GUI,
+* Open the [mtrk designer GUI](),
 * Choose a base sequence (different options available for short/longTE and resolution),
 * Click on the upload button and load it. 
 
