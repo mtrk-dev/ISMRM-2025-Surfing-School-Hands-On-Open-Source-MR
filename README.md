@@ -19,7 +19,7 @@ Thursday, May 15, 13:15: [mtrk oral session](https://submissions.mirasmart.com/I
 
 ## Installing mtrk
 **Follow instructions** for Vagrant install on [main page](https://github.com/mtrk-dev).
-To ensure smooth installation and execution, it is better to have VirtulBox opened in the background. 
+To ensure smooth installation and execution, it is better to have VirtualBox opened in the background. 
 
 If mtrk is already installed, **make sure it is up to date**:
 
@@ -46,7 +46,7 @@ Four different **readout strategies** are offered in mtrk:
 * **Cartesian**: a multi-shot Cartesian trajectory
 * **EPI**: a single-shot Cartesian echo-planar trajectory
 * **Radial**: a multi-shot radial trajectory (using golden angle)
-* **Spiral**: a single-shot Archimedaen spiral trajectory.
+* **Spiral**: a single-shot Archimedean spiral trajectory.
   
 These can be found in the **block browser** of the **mtrk designer** interface (check [main page](https://github.com/mtrk-dev) for an overview of the designer).
 
@@ -60,7 +60,7 @@ For this tutorial, **6 base sequences** containing a spin-echo excitation, diffe
 * `base_sequence_singleShot_TE200_TR4000_res128.mtrk`: spin echo exitation (1 slice), TE = 200ms, TR = 4000ms, resolution = 128, number of excitations = 1, adapted for single-shot trajectories. 
 
 ## Using different readouts in mtrk
-The processus is **identical for every readout**. It is important to use a **base sequence** adapted for the chosen type of reaout (single- or multi-shot) to ensure the looping structure coherence. 
+The process is **identical for every readout**. It is important to use a **base sequence** adapted for the chosen type of reaout (single- or multi-shot) to ensure the looping structure coherence. 
 
 ### A bit of theory
 <p align="center">
@@ -129,9 +129,9 @@ If you are interested in contributing by implementing a new block, please let us
 ## Simulating obtained sequences in KomaMRI
 The previously generated sequences can be tested using KomaMRI. The images shown in the presentation were obtained using two phantoms:
 * A cylinder phantom with two different compartments, supporting long TEs,
-* A brain phantom reproducing the caracteristics of a human brain and giving good results on shorter TEs. 
+* A brain phantom reproducing the characteristics of a human brain and giving good results on shorter TEs. 
 
-KomaMRI's graphical user interface can be used to simulate on the bain phantom, however it does not support the cylinder phantom. 
+KomaMRI's graphical user interface can be used to simulate on the brain phantom, however it does not support the cylinder phantom. 
 
 To simulate on either the cylinder or brain phantoms and obtain the same images featured in the presentation, go to  `Simulation` and run `educational2025_mtrk_simulation.jl`. This script will ask to provide the sequence folder, the sequence name and the phantom to simulate on before performing the simulation. Three julia libraries are necessary: KomaMRI, CUDA, and MAT. It is using GPU to accelerate the simulation. For machines with no CUDA support, please comment line 12 before running. 
 It saves results as HTML files stored in `Simulation/Results`:
@@ -170,7 +170,7 @@ Expected results are stored in `Simulation/ExpectedResults`.
 * Brown, Robert W., et al. Magnetic resonance imaging: physical principles and sequence design. John Wiley & Sons, 2014.​
 * https://mriquestions.com/index.html​
 
-## Opens-source tools:​
+## Open-source tools:​
 * ODIN: Jochimsen Thies H, Von Mengershausen Michael. ODIN—object-oriented development interface for NMR.​
 * SequenceTree: Magland, Jeremy F., et al. "Pulse sequence programming in a dynamic visual environment: SequenceTree." Magnetic resonance in medicine 75.1 (2016): 257-265.​
 * Pulseq: Layton, Kelvin J., et al. "Pulseq: a rapid and hardware‐independent pulse sequence prototyping framework." Magnetic resonance in medicine 77.4 (2017): 1544-1552. Journal of Magnetic Resonance. 2004;170(1):67–78.​
