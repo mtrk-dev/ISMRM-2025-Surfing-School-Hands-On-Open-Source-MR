@@ -3,7 +3,7 @@ Materials for the ISMRM 2025 educational course "Surfing School Hands On Open So
 
 ## Course description
 
-### Links (you need to be registered for the ISMRM 2025 conference to access these ressources)
+### Links (you need to be registered for the ISMRM 2025 conference to access these resources)
 Sunday, May 11, 13:15: [educational session](https://submissions.mirasmart.com/ISMRM2025/Itinerary/PresentationDetail.aspx?evdid=202)
 
 Thursday, May 15, 13:15: [mtrk oral session](https://submissions.mirasmart.com/ISMRM2025/Itinerary/PresentationDetail.aspx?evdid=1260) 
@@ -22,6 +22,10 @@ Thursday, May 15, 13:15: [mtrk oral session](https://submissions.mirasmart.com/I
 To ensure smooth installation and execution, it is better to have VirtulBox opened in the background. 
 
 If mtrk is already installed, **make sure it is up to date**:
+
+**The easiest and safest way** is to start anew by deleting your current installation `vagrant destroy`, running `git pull` in you `mtrk_designer_gui` folder and creating a new Vagrant setup with `vagrant up`. 
+
+**Alternatively**, you can try to update your git folders:
 * Run `vagrant ssh`
 * Go to the main folder `cd /opt/mtrk_designer_gui/` 
 * Make sure you have the latest version of the code by running `sudo git pull`
@@ -29,7 +33,7 @@ If mtrk is already installed, **make sure it is up to date**:
 * Finally `sudo git pull` in the viewer folder `cd /opt/mtrk_viewer`
 * Exit the ssh mode with `exit`.
 
-**Alternatively**, you can start anew by deleting your current installation `vagrant destroy`, running `git pull` in you `mtrk_designer_gui` folder and creating a new Vagrant setup with `vagrant up`. 
+
 
 ## Installing KomaMRI
 Follow instructions on the [KomaMRI repository](https://github.com/JuliaHealth/KomaMRI.jl).
@@ -127,7 +131,7 @@ The previously generated sequences can be tested using KomaMRI. The images shown
 
 KomaMRI's graphical user interface can be used to simulate on the bain phantom, however it does not support the cylinder phantom. 
 
-To simulate on either the cylinder or brain phantoms and obtain the same images featured in the presentation, go to  `Simulation` and run `educational2025_mtrk_simulation.jl`. This script will ask to provide the sequence folder, the sequence name and the phantom to simulate on before performing the simulation. 
+To simulate on either the cylinder or brain phantoms and obtain the same images featured in the presentation, go to  `Simulation` and run `educational2025_mtrk_simulation.jl`. This script will ask to provide the sequence folder, the sequence name and the phantom to simulate on before performing the simulation. Three julia libraries are necessary: KomaMRI, CUDA, and MAT. It is using GPU to accelerate the simulation. For machines with no CUDA support, please comment line 12 before running. 
 It saves results as HTML files stored in `Simulation/Results`:
 * `Simulation/Results/Sequences` stores a dynamic plot of the sequence,
 * `Simulation/Results/Trajectories` stores a dynamic 3D plot of the k-space readout trajectory,
